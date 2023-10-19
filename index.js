@@ -31,18 +31,18 @@ async function run() {
     const Foodism = database.collection("Foodism");
 
     // READ
-    app.get("/brands", async (req, res) => {
+    /*  app.get("/brands", async (req, res) => {
       const cursor = userCollections.find();
       const result = await cursor.toArray();
       res.send(result);
-    });
+    }); */
 
     // POST
-    app.post("/brands", async (req, res) => {
+    /* app.post("/brands", async (req, res) => {
       const doc = { brands };
       const result = await haiku.insertOne(doc);
       res.send(result);
-    });
+    }); */
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
@@ -51,7 +51,7 @@ async function run() {
     );
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    // await client.close();
   }
 }
 run().catch(console.dir);
@@ -62,6 +62,12 @@ app.get("/", (req, res) => {
 
 app.get("/brands", (req, res) => {
   res.send(brands);
+});
+
+app.get("/brand/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const product = brands.find((data) => data.id === id);
+  res.send(product);
 });
 
 app.listen(port, () => {
