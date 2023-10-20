@@ -29,6 +29,7 @@ async function run() {
     const database = client.db("foodDB");
     const FoodismCollection = database.collection("Foodism");
     const ProductsCollection = database.collection("Products");
+    const CartCollection = database.collection("cartCollection");
 
     // Read all data
     app.get("/brands", async (req, res) => {
@@ -58,6 +59,13 @@ async function run() {
       const query = { id: id };
       const product = await ProductsCollection.findOne(query);
       res.send(product);
+    });
+
+    // POST data
+    app.post("/cart", async (req, res) => {
+      const cartInfo = req.body;
+      const result = await CartCollection.insertOne(cartInfo);
+      res.send(result);
     });
 
     // Send a ping to confirm a successful connection
