@@ -44,6 +44,12 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/cart", async (req, res) => {
+      const cursor = CartCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
     // Read specific data
     app.get("/brand/:id", async (req, res) => {
       const id = req.params.id;
