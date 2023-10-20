@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const brands = require("./brands.json");
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -29,10 +28,17 @@ async function run() {
     await client.connect();
     const database = client.db("foodDB");
     const FoodismCollection = database.collection("Foodism");
+    const ProductsCollection = database.collection("Products");
 
     // Read all data
     app.get("/brands", async (req, res) => {
       const cursor = FoodismCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    app.get("/products", async (req, res) => {
+      const cursor = ProductsCollection.find();
       const result = await cursor.toArray();
       res.send(result);
     });
@@ -43,6 +49,15 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const user = await FoodismCollection.findOne(query);
       res.send(user);
+    });
+
+    app.get("/products/:id", async (req, res) => {
+      // const id = req.params.id;
+      // const query = { productName: id };
+      const id = parseInt(req.params.id);
+      const query = { id: id };
+      const product = await ProductsCollection.findOne(query);
+      res.send(product);
     });
 
     // Send a ping to confirm a successful connection
@@ -61,15 +76,15 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-/* app.get("/brands", (req, res) => {
-  res.send(brands);
-});
+// /* app.get("/brands", (req, res) => {
+//   res.send(brands);
+// });
 
-app.get("/brand/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const product = brands.find((data) => data.id === id);
-  res.send(product);
-}); */
+// app.get("/brand/:id", (req, res) => {
+//   const id = parseInt(req.params.id);
+//   const product = brands.find((data) => data.id === id);
+//   res.send(product);
+// }); */
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
