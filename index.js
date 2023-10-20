@@ -28,21 +28,13 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     const database = client.db("foodDB");
-    const Foodism = database.collection("Foodism");
+    const FoodismCollection = database.collection("Foodism");
 
-    // READ
-    /*  app.get("/brands", async (req, res) => {
-      const cursor = userCollections.find();
+    app.get("/brands", async (req, res) => {
+      const cursor = FoodismCollection.find();
       const result = await cursor.toArray();
       res.send(result);
-    }); */
-
-    // POST
-    /* app.post("/brands", async (req, res) => {
-      const doc = { brands };
-      const result = await haiku.insertOne(doc);
-      res.send(result);
-    }); */
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
@@ -60,7 +52,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/brands", (req, res) => {
+/* app.get("/brands", (req, res) => {
   res.send(brands);
 });
 
@@ -68,7 +60,7 @@ app.get("/brand/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const product = brands.find((data) => data.id === id);
   res.send(product);
-});
+}); */
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

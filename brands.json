@@ -1,11 +1,17 @@
 [
   {
-    "id": 1,
+    "identifier": 1,
     "title": "Coca-Cola",
     "img": "https://i.ibb.co/41S89Hr/maximilian-bruck-4-SKd-Rc-Y13j4-unsplash.jpg",
+    "advertisementImg": [
+      "https://i.ibb.co/41S89Hr/maximilian-bruck-4-SKd-Rc-Y13j4-unsplash.jpg",
+      "https://i.ibb.co/fYQmty2/louis-hansel-M-4-S-Ss-DFw-unsplash.jpg",
+      "https://i.ibb.co/V3YQx7M/mahbod-akhzami-If-Xtq-n-ZOs4-unsplash.jpg",
+      "https://i.ibb.co/QXXCn53/brett-jordan-Q4-8o-T2bvw8-unsplash.jpg"
+    ],
     "products": [
       {
-        "id": 101,
+        "identifier": 101,
         "productName": "Coca-Cola Classic",
         "type": "Soft Drink",
         "price": 1.99,
@@ -13,7 +19,7 @@
         "img": "https://i.ibb.co/fYQmty2/louis-hansel-M-4-S-Ss-DFw-unsplash.jpg"
       },
       {
-        "id": 102,
+        "identifier": 102,
         "productName": "Coca-Cola Zero",
         "type": "Soft Drink",
         "price": 1.79,
@@ -21,7 +27,7 @@
         "img": "https://i.ibb.co/V3YQx7M/mahbod-akhzami-If-Xtq-n-ZOs4-unsplash.jpg"
       },
       {
-        "id": 103,
+        "identifier": 103,
         "productName": "Diet Coke",
         "type": "Soft Drink",
         "price": 1.89,
@@ -29,7 +35,7 @@
         "img": "https://i.ibb.co/QXXCn53/brett-jordan-Q4-8o-T2bvw8-unsplash.jpg"
       },
       {
-        "id": 104,
+        "identifier": 104,
         "productName": "Coca-Cola Cherry",
         "type": "Soft Drink",
         "price": 1.95,
@@ -39,12 +45,17 @@
     ]
   },
   {
-    "id": 2,
+    "identifier": 2,
     "title": "McDonald's",
     "img": "https://i.ibb.co/M1JwKV1/julee-juu-J0-Tupu-KLXYo-unsplash.jpg",
+    "advertisementImg": [
+      "https://i.ibb.co/30GQ27p/download-9.jpg",
+      "https://i.ibb.co/M1JwKV1/julee-juu-J0-Tupu-KLXYo-unsplash.jpg",
+      "https://i.ibb.co/C7g78zT/download-10.jpg"
+    ],
     "products": [
       {
-        "id": 201,
+        "identifier": 201,
         "productName": "Big Mac",
         "type": "Burger",
         "price": 4.99,
@@ -52,7 +63,7 @@
         "img": "https://i.ibb.co/30GQ27p/download-9.jpg"
       },
       {
-        "id": 202,
+        "identifier": 202,
         "productName": "McChicken",
         "type": "Chicken Sandwich",
         "price": 3.49,
@@ -60,7 +71,7 @@
         "img": "https://i.ibb.co/C7g78zT/download-10.jpg"
       },
       {
-        "id": 203,
+        "identifier": 203,
         "productName": "Filet-O-Fish",
         "type": "Fish Sandwich",
         "price": 3.99,
@@ -68,7 +79,7 @@
         "img": "https://i.ibb.co/MSJhFJn/download-11.jpg"
       },
       {
-        "id": 204,
+        "identifier": 204,
         "productName": "McFlurry",
         "type": "Dessert",
         "price": 2.49,
@@ -78,12 +89,17 @@
     ]
   },
   {
-    "id": 3,
+    "identifier": 3,
     "title": "Starbucks",
     "img": "https://i.ibb.co/Rj6rkZj/khadeeja-yasser-3-U9-L9-Chc3is-unsplash.jpg",
+    "advertisementImg": [
+      "https://i.ibb.co/Rj6rkZj/khadeeja-yasser-3-U9-L9-Chc3is-unsplash.jpg",
+      "https://i.ibb.co/1T2STpR/download-5.jpg",
+      "https://i.ibb.co/R464TNv/download-6.jpg"
+    ],
     "products": [
       {
-        "id": 301,
+        "identifier": 301,
         "productName": "Caramel Macchiato",
         "type": "Coffee",
         "price": 3.49,
@@ -91,7 +107,7 @@
         "img": "https://i.ibb.co/1T2STpR/download-5.jpg"
       },
       {
-        "id": 302,
+        "identifier": 302,
         "productName": "Pumpkin Spice Latte",
         "type": "Coffee",
         "price": 4.29,
@@ -99,7 +115,7 @@
         "img": "https://i.ibb.co/R464TNv/download-6.jpg"
       },
       {
-        "id": 303,
+        "identifier": 303,
         "productName": "Green Tea Frappuccino",
         "type": "Frappuccino",
         "price": 4.99,
@@ -107,7 +123,7 @@
         "img": "https://i.ibb.co/dMnVnns/download-7.jpg"
       },
       {
-        "id": 304,
+        "identifier": 304,
         "productName": "Java Chip Frappuccino",
         "type": "Frappuccino",
         "price": 5.49,
@@ -117,12 +133,17 @@
     ]
   },
   {
-    "id": 4,
+    "identifier": 4,
     "title": "PepsiCo",
     "img": "https://i.ibb.co/jWcsjgx/olena-bohovyk-XISvsv7-LR4c-unsplash.jpg",
+    "advertisementImg": [
+      "https://i.ibb.co/jWcsjgx/olena-bohovyk-XISvsv7-LR4c-unsplash.jpg",
+      "https://i.ibb.co/jWcsjgx/olena-bohovyk-XISvsv7-LR4c-unsplash.jpg",
+      "https://i.ibb.co/HdPpMrX/andrew-george-e-X2u1-YM7b3-E-unsplash.jpg"
+    ],
     "products": [
       {
-        "id": 401,
+        "identifier": 401,
         "productName": "Pepsi",
         "type": "Soft Drink",
         "price": 1.79,
@@ -130,7 +151,7 @@
         "img": "https://i.ibb.co/jWcsjgx/olena-bohovyk-XISvsv7-LR4c-unsplash.jpg"
       },
       {
-        "id": 402,
+        "identifier": 402,
         "productName": "Diet Pepsi",
         "type": "Soft Drink",
         "price": 1.89,
@@ -138,7 +159,7 @@
         "img": "https://i.ibb.co/HdPpMrX/andrew-george-e-X2u1-YM7b3-E-unsplash.jpg"
       },
       {
-        "id": 403,
+        "identifier": 403,
         "productName": "Pepsi Zero Sugar",
         "type": "Soft Drink",
         "price": 1.99,
@@ -146,7 +167,7 @@
         "img": "https://i.ibb.co/P1qg4KD/mikael-stenberg-c-Je-GGOI8e-E0-unsplash.jpg"
       },
       {
-        "id": 404,
+        "identifier": 404,
         "productName": "Mountain Dew",
         "type": "Soft Drink",
         "price": 1.89,
@@ -156,12 +177,17 @@
     ]
   },
   {
-    "id": 5,
+    "identifier": 5,
     "title": "Nestlé",
     "img": "https://i.ibb.co/gFVfZnq/inma-santiago-9-Sxyu7fge9-M-unsplash.jpg",
+    "advertisementImg": [
+      "https://i.ibb.co/gFVfZnq/inma-santiago-9-Sxyu7fge9-M-unsplash.jpg",
+      "https://i.ibb.co/FsqK2wx/matt-chris-pua-W73-Ld-E-t8-DY-unsplash.jpg",
+      "https://i.ibb.co/6vV48XZ/download-1.png"
+    ],
     "products": [
       {
-        "id": 501,
+        "identifier": 501,
         "productName": "KitKat",
         "type": "Chocolate",
         "price": 1.29,
@@ -169,7 +195,7 @@
         "img": "https://i.ibb.co/FsqK2wx/matt-chris-pua-W73-Ld-E-t8-DY-unsplash.jpg"
       },
       {
-        "id": 502,
+        "identifier": 502,
         "productName": "Nestlé Crunch",
         "type": "Chocolate",
         "price": 1.19,
@@ -177,7 +203,7 @@
         "img": "https://i.ibb.co/6vV48XZ/download-1.png"
       },
       {
-        "id": 503,
+        "identifier": 503,
         "productName": "Nestlé Aero",
         "type": "Chocolate",
         "price": 1.39,
@@ -185,7 +211,7 @@
         "img": "https://i.ibb.co/1KddP5H/download-3.jpg"
       },
       {
-        "id": 504,
+        "identifier": 504,
         "productName": "Milkybar",
         "type": "White Chocolate",
         "price": 1.49,
@@ -195,12 +221,13 @@
     ]
   },
   {
-    "id": 6,
+    "identifier": 6,
     "title": "Kellogg's",
     "img": "https://i.ibb.co/5k3gm2W/haithem-ferdi-WSUdiy9cids-unsplash.jpg",
+    "advertisementImg": [],
     "products": [
       {
-        "id": 601,
+        "identifier": 601,
         "productName": "Frosted Flakes",
         "type": "Cereal",
         "price": 2.49,
@@ -208,7 +235,7 @@
         "img": "https://i.ibb.co/myfN0yJ/deepak-n-gwe4-Z-E5s-K0-unsplash.jpg"
       },
       {
-        "id": 602,
+        "identifier": 602,
         "productName": "Special K",
         "type": "Cereal",
         "price": 2.29,
@@ -216,7 +243,7 @@
         "img": "https://i.ibb.co/vx5mvY9/download.png"
       },
       {
-        "id": 603,
+        "identifier": 603,
         "productName": "Rice Krispies",
         "type": "Cereal",
         "price": 2.19,
@@ -224,7 +251,7 @@
         "img": "https://i.ibb.co/rftThgQ/images.jpg"
       },
       {
-        "id": 604,
+        "identifier": 604,
         "productName": "Corn Flakes",
         "type": "Cereal",
         "price": 1.99,
