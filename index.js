@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const brands = require("./brands.json");
 const app = express();
 const port = process.env.PORT || 5000;
@@ -30,10 +30,19 @@ async function run() {
     const database = client.db("foodDB");
     const FoodismCollection = database.collection("Foodism");
 
+    // Read all data
     app.get("/brands", async (req, res) => {
       const cursor = FoodismCollection.find();
       const result = await cursor.toArray();
       res.send(result);
+    });
+
+    // Read specific data
+    app.get("/brand/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const user = await FoodismCollection.findOne(query);
+      res.send(user);
     });
 
     // Send a ping to confirm a successful connection
