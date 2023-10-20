@@ -51,6 +51,14 @@ async function run() {
     });
 
     // Read specific data
+
+    app.get("/cart/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const cartData = await CartCollection.findOne(query);
+      res.send(cartData);
+    });
+
     app.get("/brand/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
